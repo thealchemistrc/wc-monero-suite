@@ -140,11 +140,25 @@ watch it advance from on-hold to Processing.
 <b>**Alternative: pairing without copying secrets**</b>
 
 On the same settings page, start a pairing session (you get three BIP39-derived
-code words). On the device run `python3 xmr-pushd.py --pair words words words`,
-read the words shown there, and confirm on both screens that they match. Approve,
-and the derived secret installs itself on both ends. Pairing endpoints are
-rate-limited; unsigned pushes are rejected once any device is authorized.
-</details>
+code words). On the device run `Your `xmr-pushd.conf` only needs `wp_url` set for this (no secret required yet).
+ 
+1. Go to **Settings → Monero Push** → start a pairing session. WordPress shows
+   **three code words** plus the ready-made command.
+2. On the device, run exactly what it says:
+ 
+   ```bash
+   python3 xmr-pushd.py --pair <word1> <word2> <word3>
+   ```
+ 
+   (the words identify the session; the store URL comes from your conf)
+3. The device connects and both screens now display three **SAS words**.
+   Compare them out loud or over a video call — never just trust the channel
+   you typed the code words through.
+4. Words match → click **Confirm** on the admin page. The device's signing key
+   is authorized and the derived shared secret installs itself on both ends.
+ 
+Pairing endpoints are rate-limited; unsigned pushes are rejected once any
+device is authorized.
 
 ### Route B — Scanner mode (no device needed)
 
@@ -294,7 +308,9 @@ Copy `xmr-pushd.conf.example`. Keys: `wp_url`, `wp_post_field`, `wp_status_param
 `network(mainnet|testnet|stagenet)`, `poll_interval`, `status_interval`,
 `min_pool_free`, `batch_size`, `address_generation_cooldown`, `debug`,
 `tls_verify` (**keep true in production**), `state_file`.
-Runtime flags: `--edit` (TUI), `--debug`, `--pair <url>`, `--show-pubkey`,
+Runtime flags: `--edit` (TUI), `--debug`, `--pair <word1> <word2> [<word3>]`
+(code words from the admin pairing screen; requires `wp_url` in the conf),
+`--show-pubkey`,
 `--prune-addresses` (+ `--prune-dry-run`, `--prune-keep=N`).
 Never commit your real `xmr-pushd.conf` or `xmr-pushd-state.json` — both are gitignored.
 
