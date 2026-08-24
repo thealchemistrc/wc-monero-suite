@@ -140,7 +140,7 @@ watch it advance from on-hold to Processing.
 <b>**Alternative: pairing without copying secrets**</b>
 
 On the same settings page, start a pairing session (you get three BIP39-derived
-code words). On the device run `python3 xmr-pushd.py --pair https://store/?pair=<id>`,
+code words). On the device run `python3 xmr-pushd.py --pair words words words`,
 read the words shown there, and confirm on both screens that they match. Approve,
 and the derived secret installs itself on both ends. Pairing endpoints are
 rate-limited; unsigned pushes are rejected once any device is authorized.
