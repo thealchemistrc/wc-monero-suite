@@ -136,8 +136,8 @@ Healthy traffic shows `addresses` merges and later `confirm` events — never
 `decrypt_fail`, `bad_timestamp`, or `sig_fail`. Then place a test order and
 watch it advance from on-hold to Processing.
 
-<details>
-<summary><b>Alternative: pairing without copying secrets</b></summary>
+
+<b>**Alternative: pairing without copying secrets**</b>
 
 On the same settings page, start a pairing session (you get three BIP39-derived
 code words). On the device run `python3 xmr-pushd.py --pair https://store/?pair=<id>`,
