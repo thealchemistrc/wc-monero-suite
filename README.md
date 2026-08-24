@@ -66,6 +66,7 @@ initiates wallet calls. If you don't want a dedicated device either, the built-i
 PHP using only the private *view* key and a public node.
 
 Zero third-party APIs, zero custody, zero fees beyond the network's.
+The push mode works entirely over ordinary web traffic, no port forwarding needed and can run on low-end hardware, unlike other solutions.
 
 ---
 
