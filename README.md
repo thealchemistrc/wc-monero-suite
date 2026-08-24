@@ -224,7 +224,7 @@ Admin + customer e-mails carry address, amount, tx hashes; admins get a
 
 ## Payment modes compared
 
-| | **Push** | **Scanner** | **Auto (wallet-rpc)** | **Manual / Hybrid** |
+| **Push** | **Scanner** | **Auto (wallet-rpc)** | **Manual / Hybrid** |
 |---|---|---|---|
 | Wallet keys on server | none | private **view** key only | none (RPC URL only) | none |
 | Extra infrastructure | any always-on host + `monero-wallet-rpc` | reachable full `monerod` node | reachable `monero-wallet-rpc` | nothing |
