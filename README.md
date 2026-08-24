@@ -140,7 +140,7 @@ watch it advance from on-hold to Processing.
 <b>**Alternative: pairing without copying secrets**</b>
 
 On the same settings page, start a pairing session (you get three BIP39-derived
-code words). On the device run `Your `xmr-pushd.conf` only needs `wp_url` set for this (no secret required yet).
+code words). Your `xmr-pushd.conf` only needs `wp_url` set for this (no secret required yet).
  
 1. Go to **Settings → Monero Push** → start a pairing session. WordPress shows
    **three code words** plus the ready-made command.
