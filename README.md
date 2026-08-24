@@ -195,7 +195,7 @@ After checkout, the thank-you/order page shows address (QR + copy buttons),
 exact XMR amount, countdown, and a live progress panel:
 
 | Stage | Meaning |
-
+|---|---|
 | `awaiting` | nothing seen on-chain yet — page polls |
 | `detected` | tx seen, below threshold confirmations — bar creeps |
 | `underpaid` | seen but below `min_amount` — keeps polling so a top-up flips it forward |
@@ -210,7 +210,7 @@ Admin + customer e-mails carry address, amount, tx hashes; admins get a
 ## Payment modes compared
 
 | | **Push** | **Scanner** | **Auto (wallet-rpc)** | **Manual / Hybrid** |
-
+|---|---|---|---|
 | Wallet keys on server | none | private **view** key only | none (RPC URL only) | none |
 | Extra infrastructure | any always-on host + `monero-wallet-rpc` | reachable full `monerod` node | reachable `monero-wallet-rpc` | nothing |
 | Detection latency | seconds after push | one cron cycle while orders open | same as scanner | human |
@@ -346,7 +346,7 @@ Investigate: `orphan`, `decrypt_fail`, `sig_*`, `bad_timestamp`, `pool_low`,
 Debug-log events:
 
 | Event | Meaning | Action |
-
+|---|---|---|
 | `confirm` | Confirmation applied to an order | healthy |
 | `addresses` | Address batch merged | healthy |
 | `addresses_pruned` | Unused addresses dropped | intentional |
@@ -377,7 +377,7 @@ anything (checkout-race protection).
 ## Troubleshooting
 
 | Symptom | Likely cause | Fix |
-
+|---|---|---|
 | Order stays on-hold, no `confirm` events | Daemon down / transport broken | check daemon console; empty debug panel ⇒ pushes aren't arriving |
 | `bad_timestamp` in log | Device clock skew | fixed daemons self-heal after first status check; sync NTP meanwhile |
 | `decrypt_fail` repeatedly | Secret mismatch | re-copy secret or re-pair |
@@ -475,6 +475,7 @@ run testnet/simulate first, keep amounts sane, monitor the alert stream.
 **Can I donate / help Development?** You are always welcome to fork this project or to donate and fund developed that way.
 
 xmr: 85zC5sgEff8KiZaaSv15D7jkgGVJhNSPhQWPnZwghbUdF3rBDU1rmCmeNwAxBABL9piK6xEW6T3vMZDCnFWMEn9KVsHmNBA
+
 btc: bc1qxsv4egn3zfxy2nsdcn8p7hszuchgmdfxg2xnj0
 
 ---
