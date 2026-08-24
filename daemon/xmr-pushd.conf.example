@@ -1,0 +1,24 @@
+{
+  "wp_url": "https://your-store.com",
+  "wp_post_field": "msg",
+  "wp_status_param": "t",
+  "shared_secret_hex": "Paste the 64-character hex key from WordPress → Settings → Monero Push here",
+
+  "wallet_rpc_url": "http://127.0.0.1:18089/json_rpc",
+  "wallet_rpc_user": "",
+  "wallet_rpc_pass": "",
+
+  "wallet_id": "default",
+  "account_index": 0,
+  "network": "mainnet",
+
+  "poll_interval": 30,
+  "status_interval": 43200,
+  "min_pool_free": 10,
+  "batch_size": 50,
+  "address_generation_cooldown": 3600,
+
+  "state_file": "xmr-pushd-state.json",
+  "debug": false,
+  "tls_verify": true
+}
